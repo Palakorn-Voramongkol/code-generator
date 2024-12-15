@@ -3,11 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nestjs/swagger": "^8.1.0",
+    "@prisma/client": "^6.0.1",
+    "@prisma/generator-helper": "^6.0.1",
+    "@prisma/internals": "^6.0.1",
+    "@prisma/sdk": "^4.0.0",
+    "class-validator": "^0.14.1",
     "code-generator": "file:",
     "cra-template": "1.2.0",
+    "pluralize": "^8.0.0",
+    "prisma-nestjs-generator": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ejs": "^3.1.10",
+    "prettier": "^3.4.2"
   }
 }
