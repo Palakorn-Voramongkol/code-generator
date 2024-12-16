@@ -1,0 +1,17 @@
+// <%= entityName.toLowerCase() %>/dto/update-<%= entityName.toLowerCase() %>.dto.ts
+
+import { ApiPropertyOptional } from '@nestjs/swagger';
+import { <%= importValidators.join(', ') %> } from 'class-validator';
+
+export class <%= dtoClassName %> {
+  <% fields.forEach(field => { %>
+    @ApiPropertyOptional({
+      description: '<%= field.description %>',
+      example: <%- field.example %>,
+    })
+    <% field.validators.forEach(validator => { %>
+    @<%= validator %>
+    <% }); %>
+    <%= field.name %>?: <%= field.type %>;
+  <% }); %>
+}
